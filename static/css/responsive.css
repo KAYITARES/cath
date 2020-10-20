@@ -1,0 +1,99 @@
+@media only screen and (min-width:320px) and (max-width:480px){
+    .carousel-control-prev, .carousel-control-next{
+         display:none;
+    }
+
+    /* .hide{
+         display:none;
+     } */
+  
+    }
+    @media only screen and (min-width:768px) {
+        .dropdown:hover>.dropdown-menu{
+        display:block;
+        
+      }
+      
+        }
+@media only screen and (max-width:768px){
+        .smallscreen{
+            display:none;
+        }
+        form{
+            display:block;
+            width:70%;
+            margin:0 auto;
+        }
+        form input{
+            font-size:14px!important;
+        }
+        
+    }
+ @media only screen and (max-width:900px){
+        .coursel-inner{
+            height:auto!important;
+        }
+        form{
+            display:block;
+            width:80%;
+            margin:0 auto;
+    
+        }
+        .offcanvas-header{
+            display:block;
+        }
+        .navbar-collapse{
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:100%;
+            width:100%;
+            padding-right:1rem;
+            padding-left:1rem;
+            overflow-y:auto;
+            visibility:hidden;
+            background-color:#000;
+           
+            transition:visibility .2s ease-in-out;
+        }
+        
+        .navbar-collapse.show{
+            visibility:visible;
+            transform:translateX(-100%);
+            width: 50%;
+            
+        }
+       
+        .btn-close{
+            background-color:transparent;
+            border-color:transparent;
+            color:blue;
+            font-size:22px;
+    
+    
+        }
+        .navbar-light .navbar-nav .nav-link{
+            text-align:center;
+            margin-bottom:10px!important;
+            
+         
+    
+        }
+        
+        #home{
+            width:60%;
+            margin:0 auto;
+        }
+        #formbtn{
+            width:60%;
+            margin:0 auto;
+        }
+        .navbar-light .navbar-toggle{
+            color:rgba(245, 241, 241, 0);
+            border-color:rgba(0,0,0,0);
+        }
+    } 
+    @media only screen and (max-width:1200px){
+        
+    }
+   
