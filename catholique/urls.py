@@ -23,7 +23,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('^$',views.welcome,name = 'welcome'),
-    url('^form/$',views.formrender,name='formrender')
+    url('^form/$',views.formrender,name='formrender'),
+    url('^all/$',views.all,name='all')
 
 ]
 if settings.DEBUG:

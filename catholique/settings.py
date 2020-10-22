@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'catholique.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'catholic',
-        'USER':'catholique',
-        'PASSWORD':'catholique@1234',
+        'NAME':'universe',
+        'USER':'cath',
+        'PASSWORD':'cycy@1234',
         'HOST':'localhost',
         'PORT':'',
     }

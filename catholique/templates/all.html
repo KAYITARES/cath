@@ -1,14 +1,12 @@
 {%load bootstrap4%}
 {% load static%}
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>New Article</title>
-  {{form.media}}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
   {% block styles %}
     {% bootstrap_css %}
@@ -17,9 +15,8 @@
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@700&display=swap" rel="stylesheet">
   {% endblock %}
- 
-<style>
-    *{
+  <style>
+        *{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -28,52 +25,71 @@
 .form{
     position: relative;
     min-height:100vh;
-    padding:50px 100px;
+    padding:10px 10px;
     display:flex;
     justify-content: center;
-    align-items:center;
     flex-direction: column;
     background-color: black;
    
-}
-.container{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:30px;
-}
-form{
-  background-color: cadetblue;
-  padding:30px 70px;
-  border-radius: 12px;
-
-}
-
-</style>
-</head>
-
-<body>
-
-   {%include 'navbar.html'%}
-   <section class="form">
-     <div class='container'>
-      <form  action="{%url 'formrender'%}" method="post" enctype="multipart/form-data">
-        {%csrf_token%}
-    
-        {% bootstrap_form personForm layout='inline' %}
-        <input type="submit" class="btn btn-success btn-lg" value="Post">
-      </form>
-
-     </div>
-
    
-              
-                  
-           
+}
+h4{
+  color:violet;
+}
+p{
+  color:white;
+}
 
-   </section>
-{% block scripts %}
+  </style>
+</head>
+<body>
+  {%include 'navbar.html'%}
+
+  <section class="form">
+    
+  <div class="container-fluid">
+    {% for all in names %}
+  
+    <!-- Looping through news   -->
+   
+      <div class="row">
+       
+        <div class="col-md-2">
+       
+          <h5>First Name</h5>
+          <p>{{all.first_name}}</p> 
+        </div>
+        <div class="col-sm-2">
+          <h5 >Last Name</h5>
+          <p>{{all.last_name}}</p> 
+         
+        </div>
+        <div class="col-sm-2">
+          <h5>Date of Birth</h5>        
+          <p>{{all.date_of_birth}}</p>
+        </div>
+        <div class="col-sm-2">
+          <h5>Father Date of Birth</h5>        
+          <p>{{all.father_date_birth}}</p>
+        </div>
+        <div class="col-sm-2">
+          <h5>id_number</h5>        
+          <p>{{all.id_number}}</p>
+        </div>
+        <div class="col-sm-2">
+          <h5>email</h5>        
+          <p>{{all.email}}</p>
+        </div>
+      </div>
+    
+  
+    {% empty %}
+    <div class="row">
+      <h2 class="text-center">There are No One Registered</h2>
+    </div>
+    {% endfor %}
+    </section>
+    {% block scripts %}
 <script src="{% static "js/jquery-3.5.1.min.js" %}"></script>
 <script src="{% static "js/script.js" %}"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -81,5 +97,7 @@ form{
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 {% bootstrap_javascript %}
 {% endblock %}
+  
+  </div>
 </body>
 </html>
