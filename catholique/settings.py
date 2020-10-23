@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -79,9 +80,9 @@ WSGI_APPLICATION = 'catholique.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'universe',
-        'USER':'cath',
-        'PASSWORD':'cycy@1234',
+        'NAME':'fam',
+        'USER':'kacycy',
+        'PASSWORD':'kacycy@1234',
         'HOST':'localhost',
         'PORT':'',
     }

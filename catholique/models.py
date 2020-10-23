@@ -28,17 +28,16 @@ class Personel(models.Model):
     date_patronal_feast=models.DateField(auto_now_add=False,auto_now=False,blank=True,null=True)
     name_lunge=models.CharField(max_length=30)
     none=models.CharField(max_length=20)
-
-
    
     def __str__(self):
         return self.first_name
 
     def save_image(self):
         self.save()
-    class Meta:
-        ordering = ['first_name']
     @classmethod
     def get_all_names(cls):
         names= Personel.objects.all()
         return names
+
+    
+       

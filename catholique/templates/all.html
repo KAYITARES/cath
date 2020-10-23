@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Catholique Family</title>
 
   {% block styles %}
     {% bootstrap_css %}
@@ -22,18 +22,26 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
-.form{
-    position: relative;
-    min-height:100vh;
-    padding:10px 10px;
+.container{
+    width:100%;
     display:flex;
     justify-content: center;
-    flex-direction: column;
-    background-color: black;
+    align-items: center;
+    margin-top:30px;
+}
+.form{
+  background-color:black;
+  padding:100px 100px;
+  position: relative;
+  min-height:100vh;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+    
    
    
 }
-h4{
+h5{
   color:violet;
 }
 p{
@@ -44,10 +52,12 @@ p{
 </head>
 <body>
   {%include 'navbar.html'%}
-
+ 
   <section class="form">
     
   <div class="container-fluid">
+    
+
     {% for all in names %}
   
     <!-- Looping through news   -->
@@ -55,6 +65,7 @@ p{
       <div class="row">
        
         <div class="col-md-2">
+          
        
           <h5>First Name</h5>
           <p>{{all.first_name}}</p> 

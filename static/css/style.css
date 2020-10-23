@@ -76,4 +76,10 @@
   .offcanvas-header{
     display:none;
   }
+  .search-bar{
+    position:absolute;
+    z-index:1;
+    top:100px;
+    width:100%;
   
+  }
